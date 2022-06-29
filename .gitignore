@@ -1,0 +1,14 @@
+weights/
+wandb/
+*.pyc
+__pycache__/
+runs/
+*.ipynb
+04_detect_cpp/build
+Docker*
+
+
+
+
+
+
