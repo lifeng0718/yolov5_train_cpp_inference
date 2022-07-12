@@ -342,8 +342,8 @@ def run(
 def parse_opt():
     parser = argparse.ArgumentParser()
     # TODO: set params
-    parser.add_argument('--data', type=str, default=ROOT / 'data/03_fanyingshi_coco128_test.yaml', help='dataset.yaml path')
-    parser.add_argument('--weights', nargs='+', type=str, default=ROOT / 'runs/train/exp_fanyingshi_v2_type0-3_ip140+142/weights/best.pt', help='model.pt path(s)')
+    parser.add_argument('--data', type=str, default=ROOT / 'data/04_dumei_coco128_test.yaml', help='dataset.yaml path')
+    parser.add_argument('--weights', nargs='+', type=str, default=ROOT / 'runs/train/exp_dumei_type0-2_ip12123_v3/weights/best.pt', help='model.pt path(s)')
     # parser.add_argument('--task', default='val', help='train, val, test, speed or study')
     parser.add_argument('--task', default='test', help='train, val, test, speed or study')
     parser.add_argument('--single-cls', nargs='?', const=True, default=False, help='treat as single-class dataset')

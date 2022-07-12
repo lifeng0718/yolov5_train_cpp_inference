@@ -2,7 +2,7 @@
 Author: Rane wang_ran20121
 Date: 2022-06-27 15:16:15
 LastEditors: Rane wang_ran20121
-LastEditTime: 2022-06-29 08:10:05
+LastEditTime: 2022-07-04 20:45:20
 FilePath: /09_yolov5/00_cp_multi_ip_data.py
 Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 '''
@@ -12,9 +12,9 @@ import os
 
 
 # TODO: 复制IP数据，并重命名，不然重复图像数据会很多
-data_path = "/home/rane/2TDisk/01_Projects/04_huagong_proj/Dataset_Fanyingshi/ip140_data/train_v2_yolo"
-save_path = "/home/rane/2TDisk/01_Projects/04_huagong_proj/Dataset_Fanyingshi/ip142_data/train_v2_yolo_addip140"
-save_prefix = "_ip140"
+data_path = "/home/rane/2TDisk/01_Projects/04_huagong_proj/Dataset_Fanyingshi/ip142_data/train_v4_change_type3/ip142_train_v2_yolo"
+save_path = "/home/rane/2TDisk/01_Projects/04_huagong_proj/Dataset_Fanyingshi/ip142_data/train_v4_change_type3/all_train"
+save_prefix = "_ip142"
 
 if not os.path.exists(save_path + "/images"):
     os.mkdir(save_path + "/images")

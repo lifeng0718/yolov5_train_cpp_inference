@@ -567,11 +567,11 @@ def run(
 def parse_opt():
     parser = argparse.ArgumentParser()
     parser.add_argument('--data', type=str, default=ROOT / 'data/03_fanyingshi_coco128.yaml', help='dataset.yaml path')
-    parser.add_argument('--weights', nargs='+', type=str, default=ROOT / 'runs/train/exp_fanyingshi_v2_type0-3_ip140+142/weights/best.pt', help='model.pt path(s)')
+    parser.add_argument('--weights', nargs='+', type=str, default=ROOT / 'runs/train/exp_chumuqi_type01_ip118_119/weights/best.pt', help='model.pt path(s)')
     parser.add_argument('--optimize', action='store_true', help='TorchScript: optimize for mobile')
     parser.add_argument('--include',
                         nargs='+',
-                        default=['torchscript'],
+                        default=['torchscript', 'onnx', 'openvino'],
                         help='torchscript, onnx, openvino, engine, coreml, saved_model, pb, tflite, edgetpu, tfjs')
     
     

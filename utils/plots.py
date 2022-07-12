@@ -246,9 +246,16 @@ def plot_images(images, targets, paths=None, fname='images.jpg', names=None, max
                 cls = classes[j]
                 color = colors(cls)
                 cls = names[cls] if names else cls
-                if labels or conf[j] > 0.25:  # 0.25 conf thresh
+                
+                # Rane: 设置框阈值
+                # if labels or conf[j] > 0.25:  # 0.25 conf thresh
+                if labels or conf[j] > 0.3:  # 堵煤推荐0.7， 除木器0.7
                     label = f'{cls}' if labels else f'{cls} {conf[j]:.1f}'
-                    annotator.box_label(box, label, color=color)
+                    # Rane
+                    label_ = label
+                    if "type_" in label:
+                        label_ = label.split("type_")[1]
+                    annotator.box_label(box, label_, color=color)
                     
                     # Rane: 写box和标签
                     w_scale = 2560.0 / w
